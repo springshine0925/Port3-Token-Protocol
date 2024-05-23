@@ -1,0 +1,23 @@
+# use Ganache's forked mainnet mode as the default network
+networks:
+  default: development
+
+autofetch_sources: false
+
+# require OpenZepplin Contracts
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.7.3
+
+# path remapping to support OpenZepplin imports with NPM-style path
+compiler:
+  solc:
+    version: 0.8.9
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.7.3"
+
+reports:
+  exclude_contracts:
+    - ERC721 
+    - AccessControl
+    - ECDSA
+    - Initializable
