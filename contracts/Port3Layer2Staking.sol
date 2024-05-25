@@ -172,7 +172,7 @@ contract Port3Layer2Staking is Context, Initializable, ReentrancyGuard {
           return 0;
         }
         
-        // 质押池没有达到门槛值
+        //The pledge pool has not reached the threshold
         if (pool.amount < rewardThreshold) {
           return 0;
         }
